@@ -14,18 +14,16 @@ def render_sidebar():
             "app/pages/Dashboard.py",
             title="Dashboard"
         )
-
-        st.page_link(
+        radar = st.Page(
             "app/pages/Radar.py",
-            label="🎯 Radar"
+            title="Radar"
         )
-
-        st.page_link(
+        costmap = st.Page(
             "app/pages/CostMap.py",
-            label="🗺 CostMap"
+            title="CostMap"
+        )
+        analysis = st.Page(
+            "app/pages/Analysis.py",
+            title="Analysis"
         )
 
-        st.page_link(
-            "app/pages/Analysis.py",
-            label="🔍 Analysis"
-        )
