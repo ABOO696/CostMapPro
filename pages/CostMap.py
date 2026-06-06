@@ -1,6 +1,12 @@
 import streamlit as st
 import pandas as pd
 
+from app.sidebar import (
+    render_sidebar
+)
+
+render_sidebar()
+
 from app.components.charts import (
     cost_chart,
     cost_gap_chart
