@@ -14,10 +14,6 @@ def render_sidebar():
 
         st.write("導航")
 
-        st.page_link(
-            "app.py",
-            label="🏠 Home"
-        )
 
         st.page_link(
             "app/pages/Dashboard.py",
