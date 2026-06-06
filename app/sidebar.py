@@ -28,7 +28,7 @@ def render_sidebar():
         )
 
 pg = st.navigation(
-    [dashboard, radar,costmap,analysis]
+    [dashboard,radar,costmap,analysis]
 )
 
 pg.run()
