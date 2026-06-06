@@ -15,10 +15,10 @@ def render_sidebar():
         st.write("導航")
 
 
-        st.page_link(
-            "app/pages/Dashboard.py",
-            label="📊 Dashboard"
-        )
+dashboard = st.Page(
+    "pages/Dashboard.py",
+    title="Dashboard"
+)
 
         st.page_link(
             "app/pages/Radar.py",
