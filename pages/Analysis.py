@@ -1,5 +1,11 @@
 import streamlit as st
 
+from app.sidebar import (
+    render_sidebar
+)
+
+render_sidebar()
+
 from app.components.gauges import (
     cost_score_gauge
 )
