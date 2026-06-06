@@ -11,7 +11,7 @@ def render_sidebar():
         st.write("導航")
 
         dashboard = st.Page(
-            "pages/Dashboard.py",
+            "app/pages/Dashboard.py",
             title="Dashboard"
         )
 
