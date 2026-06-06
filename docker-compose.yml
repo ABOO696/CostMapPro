@@ -3,26 +3,28 @@ services:
   postgres:
     image: postgres:16
 
-  api:
-    build: .
+    environment:
+      POSTGRES_DB: costmap
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
 
-    command: >
-      uvicorn
-      app.api.main:app
-      --host 0.0.0.0
-      --port 8000
+    ports:
+      - "5432:5432"
 
-    depends_on:
-      - postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
   streamlit:
     build: .
 
-    command: >
-      streamlit run app.py
+    env_file:
+      - .env
 
     ports:
       - "8501:8501"
 
     depends_on:
-      - api
+      - postgres
+
+volumes:
+  postgres_data:
