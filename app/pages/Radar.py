@@ -1,6 +1,10 @@
 import streamlit as st
 import pandas as pd
+from app.sidebar import (
+    render_sidebar
+)
 
+render_sidebar()
 from app.services.stock_service import (
     StockService
 )
