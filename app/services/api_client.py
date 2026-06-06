@@ -4,6 +4,29 @@ import requests
 
 API_URL = "http://localhost:8000"
 
+def get_stock_analysis(stock_id):
+
+    try:
+
+        response = requests.get(
+            f"{API_URL}/costmap/{stock_id}"
+        )
+
+        response.raise_for_status()
+
+        data = response.json()
+
+        if len(data) == 0:
+            return None
+
+        return data[-1]
+
+    except Exception as e:
+
+        print(e)
+
+        return None
+        
 
 def get_radar():
 
