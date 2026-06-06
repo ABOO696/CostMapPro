@@ -1,14 +1,9 @@
 import streamlit as st
 
-from app.components.metrics import (
-    show_metrics
+from app.sidebar import (
+    render_sidebar
 )
 
-st.title("Dashboard")
+render_sidebar()
 
-show_metrics(
-    total_stock=1800,
-    radar_stock=50,
-    avg_score=67.3,
-    bullish_count=328
-)
+st.title("📊 Dashboard")
