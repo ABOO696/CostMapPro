@@ -8,3 +8,4 @@ alembic==1.16.2
 apscheduler==3.11.0
 python-dotenv==1.1.0
 pandas
+psycopg2-binary
