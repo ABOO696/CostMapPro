@@ -27,3 +27,8 @@ def render_sidebar():
             title="Analysis"
         )
 
+pg = st.navigation(
+    [dashboard, radar,costmap,analysis]
+)
+
+pg.run()
