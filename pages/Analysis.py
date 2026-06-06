@@ -14,17 +14,29 @@ st.title("Analysis")
 
 stock_id = st.text_input(
     "Stock ID",
-    "2330"
+    value="2330"
 )
 
-score = 91
-
-st.plotly_chart(
-    cost_score_gauge(score),
-    use_container_width=True
+row = get_stock_analysis(
+    stock_id
 )
 
-st.metric(
-    "Cost Score",
-    score
-)
+if row:
+
+    score = row["cost_score"]
+
+    st.plotly_chart(
+        cost_score_gauge(score),
+        use_container_width=True
+    )
+
+    st.metric(
+        "Cost Score",
+        score
+    )
+
+else:
+
+    st.warning(
+        "查無資料"
+    )
