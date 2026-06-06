@@ -5,20 +5,15 @@ import streamlit as st
 def render_sidebar():
 
     with st.sidebar:
-
         st.title("📈 CostMap Pro")
-
         st.caption("V1.5")
-
         st.divider()
-
         st.write("導航")
 
-
-dashboard = st.Page(
-    "pages/Dashboard.py",
-    title="Dashboard"
-)
+        dashboard = st.Page(
+            "pages/Dashboard.py",
+            title="Dashboard"
+        )
 
         st.page_link(
             "app/pages/Radar.py",
