@@ -5,15 +5,12 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("📈 CostMap Pro V1.5")
+st.title("📈 CostMap Pro")
 
-st.markdown("""
-### 主力成本雷達系統
+st.info(
+    "CostMap Pro V1.5 MVP"
+)
 
-使用左側選單進入：
-
-- Dashboard
-- Radar
-- CostMap
-- Analysis
-""")
+st.write(
+    "Dashboard will be enabled after ETL and Cost Engine setup."
+)
