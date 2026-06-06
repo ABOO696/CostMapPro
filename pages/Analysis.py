@@ -9,7 +9,9 @@ render_sidebar()
 from app.components.gauges import (
     cost_score_gauge
 )
-
+from app.services.api_client import (
+    get_stock_analysis
+)
 st.title("Analysis")
 
 stock_id = st.text_input(
